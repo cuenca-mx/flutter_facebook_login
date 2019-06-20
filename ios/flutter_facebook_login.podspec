@@ -19,6 +19,7 @@ A Flutter plugin for allowing users to authenticate with native Android &amp; iO
   s.dependency 'FBSDKCoreKit', '4.39.1'
   s.dependency 'FBSDKLoginKit', '4.39.1'
   s.dependency 'FBSDKShareKit', '4.39.1'
+  s.dependency 'TwitterKit'
 
   # https://github.com/flutter/flutter/issues/14161
   s.static_framework = true

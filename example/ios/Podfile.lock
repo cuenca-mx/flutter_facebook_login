@@ -17,10 +17,14 @@ PODS:
     - FBSDKLoginKit (= 4.39.1)
     - FBSDKShareKit (= 4.39.1)
     - Flutter
+    - TwitterKit
   - path_provider (0.0.1):
     - Flutter
   - permission_handler (3.1.0):
     - Flutter
+  - TwitterCore (3.2.0)
+  - TwitterKit (3.4.2):
+    - TwitterCore (>= 3.2.0)
 
 DEPENDENCIES:
   - Flutter (from `/Users/alejandroviquez/Desktop/development/flutter/bin/cache/artifacts/engine/ios`)
@@ -34,6 +38,8 @@ SPEC REPOS:
     - FBSDKCoreKit
     - FBSDKLoginKit
     - FBSDKShareKit
+    - TwitterCore
+    - TwitterKit
 
 EXTERNAL SOURCES:
   Flutter:
@@ -51,9 +57,11 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: c3079d9a4db27c492287b1eed7a4272b28cf8a59
   FBSDKShareKit: 27d7b982e7b1f4638da2f2b1ab6eba5afc6b5888
   Flutter: 58dd7d1b27887414a370fcccb9e645c08ffd7a6a
-  flutter_facebook_login: f51ddb206c08a5dbafae60f0b09fe76e517ca769
+  flutter_facebook_login: 0f4efaa84d8be6edfb420342d62a91a913e5b71a
   path_provider: f96fff6166a8867510d2c25fdcc346327cc4b259
   permission_handler: fa6b0d784b1a43cb96b468a5b8365cb130b1956a
+  TwitterCore: 8cbc9ad34d91c63a0035ea05bfbfc0d7ca72a28c
+  TwitterKit: 5e4f41d70b9abdb41df5467f52d7aa2c0fd26ebb
 
 PODFILE CHECKSUM: 3098c51a7edbd004c9f2b45eca5eb135d6f3ff27
 

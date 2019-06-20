@@ -112,7 +112,10 @@ class _MyAppState extends State<MyApp> {
 
   }
 
-  @override
+
+
+
+    @override
   Widget build(BuildContext context) {
     return new MaterialApp(
       home: new Scaffold(
@@ -139,7 +142,7 @@ class _MyAppState extends State<MyApp> {
               new RaisedButton(
                 onPressed: _onShareonInstagram,
                 child: new Text('Share Instagram image'),
-              ),
+              )
             ],
           ),
         ),
