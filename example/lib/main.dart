@@ -68,7 +68,11 @@ class _MyAppState extends State<MyApp> {
 
 
   Future<void> requestPermission() async{
-    Map<PermissionGroup, PermissionStatus> permissions = await PermissionHandler().requestPermissions([PermissionGroup.storage]);
+    final handler = PermissionHandler();
+    final permission = PermissionGroup.storage;
+    final status = await handler.checkPermissionStatus(permission);
+    if (status == PermissionStatus.granted) return;
+    final statuses = await handler.requestPermissions([permission]);
   }
 
 
