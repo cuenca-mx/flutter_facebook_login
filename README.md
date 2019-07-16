@@ -1,6 +1,6 @@
 # flutter_facebook-instagram_share
 
-
+*** This is a fork from proyect https://github.com/roughike/flutter_facebook_login cleaning proyect in process
 
 A Flutter plugin for using the native Facebook Login SDKs on Android and iOS to share image, iPhoneHooks and AndroidIntents to share with instagram on iOS and Android. and Others (native share image all apps installed)
 https://developers.facebook.com/docs/sharing/ios/
