@@ -1,10 +1,12 @@
-# flutter_facebook_instagram_share
+# flutter_facebook-instagram_share
 
-[![pub package](https://img.shields.io/pub/v/flutter_facebook_login.svg)](https://pub.dartlang.org/packages/flutter_facebook_login)
- [![Build Status](https://travis-ci.org/roughike/flutter_facebook_login.svg?branch=master)](https://travis-ci.org/roughike/flutter_facebook_login) 
- [![Coverage Status](https://coveralls.io/repos/github/roughike/flutter_facebook_login/badge.svg)](https://coveralls.io/github/roughike/flutter_facebook_login)
 
-A Flutter plugin for using the native Facebook Login SDKs on Android and iOS.
+
+A Flutter plugin for using the native Facebook Login SDKs on Android and iOS to share image, iPhoneHooks and AndroidIntents to share with instagram on iOS and Android.
+https://developers.facebook.com/docs/sharing/ios/
+https://developers.facebook.com/docs/sharing/android/
+https://www.instagram.com/developer/mobile-sharing/
+
 
 ## AndroidX support
 
@@ -127,63 +129,3 @@ A sample of a complete Info.plist file can be found [here](https://github.com/ro
 
 Done!
 
-## How do I use it?
-
-The library tries to closely match the native Android & iOS login SDK APIs where possible. For complete API documentation, just see the [source code](https://github.com/roughike/flutter_facebook_login/blob/master/lib/flutter_facebook_login.dart). Everything is documented there.
-
-Since sample code is worth more than one page of documentation, here are the usual cases covered:
-
-```dart
-import 'package:flutter_facebook_login/flutter_facebook_login.dart';
-
-final facebookLogin = FacebookLogin();
-final result = await facebookLogin.logInWithReadPermissions(['email']);
-
-switch (result.status) {
-  case FacebookLoginStatus.loggedIn:
-    _sendTokenToServer(result.accessToken.token);
-    _showLoggedInUI();
-    break;
-  case FacebookLoginStatus.cancelledByUser:
-    _showCancelledMessage();
-    break;
-  case FacebookLoginStatus.error:
-    _showErrorOnUI(result.errorMessage);
-    break;
-}
-```
-
-You can also change the visual appearance of the login dialog. For example:
-
-```dart
-// Let's force the users to login using the login dialog based on WebViews. Yay!
-facebookLogin.loginBehavior = FacebookLoginBehavior.webViewOnly;
-```
-
-The complete API documentation lives with the source code, [which can be found here](https://github.com/roughike/flutter_facebook_login/blob/master/lib/flutter_facebook_login.dart).
-
-### Getting the Facebook profile of a signed in user
-
-For now, this feature isn't going to be integrated into this plugin. See the [discussion here](https://github.com/roughike/flutter_facebook_login/issues/11).
-
-However, you can get do this in four lines of Dart code:
-
-```dart
-final result = await facebookSignIn.logInWithReadPermissions(['email']);
-final token = result.accessToken.token;
-final graphResponse = await http.get(
-            'https://graph.facebook.com/v2.12/me?fields=name,first_name,last_name,email&access_token=${token}');
-final profile = JSON.decode(graphResponse.body);
-```
-
-The `profile` variable will now contain the following information:
-
-```json
-{
-   "name": "Iiro Krankka",
-   "first_name": "Iiro",
-   "last_name": "Krankka",
-   "email": "iiro.krankka\u0040gmail.com",
-   "id": "<user id here>"
-}
-```
