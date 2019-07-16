@@ -2,7 +2,7 @@
 
 
 
-A Flutter plugin for using the native Facebook Login SDKs on Android and iOS to share image, iPhoneHooks and AndroidIntents to share with instagram on iOS and Android.
+A Flutter plugin for using the native Facebook Login SDKs on Android and iOS to share image, iPhoneHooks and AndroidIntents to share with instagram on iOS and Android. and Others (native share image all apps installed)
 https://developers.facebook.com/docs/sharing/ios/
 https://developers.facebook.com/docs/sharing/android/
 https://www.instagram.com/developer/mobile-sharing/
