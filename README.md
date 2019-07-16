@@ -125,7 +125,7 @@ Once you have the Facebook App ID figured out, then you'll just have to copy-pas
 </array>
 ```
 
-A sample of a complete Info.plist file can be found [here](https://github.com/roughike/flutter_facebook_login/blob/master/example/ios/Runner/Info.plist#L49-L70).
+A sample of a complete Info.plist file can be found [here](https://github.com/cuenca-mx/flutter_facebook_login/blob/master/example/ios/Runner/Info.plist#L57).
 
 Done!
 
